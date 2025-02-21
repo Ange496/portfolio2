@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="ff.css">
+    <link rel="icon" href="ima/">
+</head>
+<body>
+
+    <div class="container">
+        <div class="wrapper">
+            <div class="box login-box">
+                <h2>Connexion <br>
+                    Eexemple de formulaire
+                </h2>
+                <form>
+                    <div class="input-box">
+                        <input type="text" required>
+                        <label>Nom d'utilisateur</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" required>
+                        <label>Mot de passe</label>
+                    </div>
+                    <button type="submit" class="btn">Connecter</button>
+                    <p>Pas de compte ? <a href="#" id="showRegister">Créer un compte</a></p>
+                </form>
+            </div>
+            <div class="box register-box">
+                <h2>Inscription</h2>
+                <form>
+                    <div class="input-box">
+                        <input type="text" required>
+                        <label>Nom d'utilisateur</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" required>
+                        <label>Mot de passe</label>
+                    </div>
+                    <button type="submit" class="btn">S'inscrire</button>
+                    <p>Déjà un compte ? <a href="#" id="showLogin">Se connecter</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const wrapper = document.querySelector(".wrapper");
+        const showRegister = document.getElementById("showRegister");
+        const showLogin = document.getElementById("showLogin");
+
+        showRegister.addEventListener("click", () => {
+            wrapper.classList.add("rotate");
+        });
+
+        showLogin.addEventListener("click", () => {
+            wrapper.classList.remove("rotate");
+        });
+    </script>
+
+</body>
+</html>
