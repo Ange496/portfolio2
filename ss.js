@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     typeEffect(nomElement, "ADJE ADJE ANGE EMMANUEL . S", 120);
     setTimeout(() => {
-        typeEffect(professionElement, "Développeur FullStack & Web Designer", 100);
+        typeEffect(professionElement, "Développeur FullStack & Web Design", 100);
     }, 2000);
 
     // Effet d'apparition progressive des projets

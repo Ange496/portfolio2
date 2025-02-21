@@ -1,3 +1,48 @@
+/* --- Ajouts pour le header et la navigation --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000000;
+    color:#04dddd;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    /* Animation des liens */
+    animation: fadeInRight 0.8s ease-out;
+}
+
+.nav-link:hover {
+    color:#04dddd;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* --- Styles existants --- */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,7 +52,6 @@ body {
     box-shadow: 0px 10px 20px rgb(0, 0, 0);
     transition: transform 0.5s;
 }
-
 
 #accueil {
     display: flex;
@@ -47,7 +91,6 @@ body {
     transition: transform 0.5s;
 }
 
-
 @keyframes slideIn {
     to {
         opacity: 1;
@@ -64,14 +107,11 @@ body {
     }
 }
 
-
 section {
     padding: 60px;
     text-align: center;
     transition: transform 0.5s;
 }
-
-
 
 @keyframes fadeInUp {
     to {
@@ -79,7 +119,6 @@ section {
         transform: translateY(0);
     }
 }
-
 
 form {
     max-width: 400px;
@@ -96,7 +135,6 @@ input, textarea {
     transition: transform 0.5s;
 }
 
-
 button {
     background: rgb(4, 221, 221);
     color: rgb(0, 0, 0);
@@ -108,14 +146,13 @@ button {
 }
 
 button:hover {
-    background:  rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
     transition: transform 0.5s;
 }
 
-
 #apropos {
-    background: linear-gradient(135deg, rgb(4, 221, 221));
-    color: rgb(4, 221, 221);
+    background: linear-gradient(135deg, rgb(4, 221, 221), #000000);
+    color: #ffffff;
     text-align: center;
     padding: 60px 20px;
     opacity: 0;
@@ -124,16 +161,13 @@ button:hover {
     border-radius: 15px;
     margin: 20px;
     box-shadow: 0px 10px 20px rgb(255, 255, 255);
+    transition: transform 0.5s, box-shadow 0.5s;
 }
 
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+#apropos:hover {
+    transform: translateY(0);
+    box-shadow: 0px 20px 40px rgb(255, 255, 255);
 }
-
 
 #competences {
     background: rgb(0, 0, 0);
@@ -144,14 +178,12 @@ button:hover {
     animation: zoomIn 1.5s forwards ease-in-out;
 }
 
-
 @keyframes zoomIn {
     to {
         opacity: 1;
         transform: scale(1);
     }
 }
-
 
 h2, h3 {
     font-size: 2rem;
@@ -166,7 +198,7 @@ h2::after, h3::after {
     position: absolute;
     width: 100%;
     height: 4px;
-    background: linear-gradient(to right,rgb(4, 221, 221), #000000);
+    background: linear-gradient(to right, rgb(4, 221, 221), #000000);
     bottom: 0;
     left: 0;
     transform: scaleX(0);
@@ -177,7 +209,6 @@ h2::after, h3::after {
 h2:hover::after, h3:hover::after {
     transform: scaleX(1);
 }
-
 
 ul {
     list-style: none;
@@ -203,13 +234,11 @@ li:hover {
     transform: scale(1.05);
 }
 
-
 #projets {
     background: rgb(0, 0, 0);
     text-align: center;
     padding: 60px 20px;
 }
-
 
 .projets-container {
     display: flex;
@@ -217,7 +246,6 @@ li:hover {
     justify-content: center;
     gap: 20px;
 }
-
 
 .projet {
     background: #000000;
@@ -249,7 +277,6 @@ li:hover {
     color: rgb(4, 221, 221);
 }
 
-
 .projet h3 {
     position: relative;
     display: inline-block;
@@ -271,6 +298,7 @@ li:hover {
 .projet:hover h3::after {
     transform: scaleX(1);
 }
+
 .btn-cv {
     display: inline-block;
     margin-top: 30px;
@@ -302,3 +330,4 @@ li:hover {
 .social-links img:hover {
     transform: scale(1.1);
 }
+

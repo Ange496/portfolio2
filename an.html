@@ -3,12 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Mon Portfolio </title>
+    <title>Mon Portfolio</title>
     <link rel="stylesheet" href="Untitled-2.css">
     <link rel="icon" href="ima/qw.png">
 </head>
 <body>
+    <header>
+        <!-- Logo en haut à gauche -->
+        <div class="logo">
+            <h1 class="logo-text">ADJE-ANGE</h1>
+        </div>
+        <style>
+            .logo-text {
+            font-size: 2em;
+            font-weight: bold;
+            color: rgb(4, 221, 221);
+            animation: fadeIn 2s ease-in-out, bounce 2s infinite;
+            }
 
+            @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            }
+
+            @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+            }
+        </style>
+        <!-- Liens de navigation en haut à droite -->
+        <nav>
+            <ul>
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#services" class="nav-link">Nos Services</a></li>
+                <li><a href="#competences" class="nav-link">Competences</a></li>
+                <li><a href="#projets" class="nav-link">Projets</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section Accueil existante -->
     <section id="accueil">
         <div class="container">
             <div class="texte">
@@ -22,20 +70,97 @@
                     <a href="https://github.com/Ange496" target="_blank">
                         <img src="ima/git.png" alt="GitHub">
                     </a>
-                    <a href="https://www.linkedin.com/in/adj%C3%A9-ange-emmanuel-s-adj%C3%A9-0015472b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                    <a href="https://www.linkedin.com/in/adj%C3%A9-ange-emmanuel-s-adj%C3%A9-0015472b9" target="_blank">
                         <img src="ima/in.png" alt="LinkedIn">
                     </a>
                     <a href="https://tiktok.com/@angespirit34" target="_blank">
                         <img src="ima/tik.png" alt="TikTok">
                     </a>
-                    <a href="dd.html" target="Eexemple de formulaire">
-                        <img src="ima/er.png" alt="TikTok">
+                    <a href="dd.html" target="_blank">
+                        <img src="ima/er.png" alt="Formulaire de contact">
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Nouvelle Section Nos Services avec appel à l'action -->
+    <section id="services" class="services-section">
+        <h2>Nos Services</h2>
+        <div class="services-container">
+            <div class="service-box">
+                <h3>Développement Web</h3>
+                <p>Création de sites web modernes et responsives.</p>
+                <a href="mailto:Stephanea872@gmail.com?subject=Demande%20de%20devis%20-%20Applications%20Mobiles" class="cta-button">Obtenir un devis</a>
+            </div>
+            <div class="service-box">
+                <h3>Optimisation SEO</h3>
+                <p>Améliorez votre visibilité sur les moteurs de recherche.</p>
+                <a href="mailto:Stephanea872@gmail.com?subject=Demande%20de%20devis%20-%20Applications%20Mobiles" class="cta-button">Obtenir un devis</a>
+            </div>
+            <div class="service-box">
+                <h3>Solutions Cloud</h3>
+                <p>Hébergement et services cloud pour votre entreprise.</p>
+                <a href="mailto:Stephanea872@gmail.com?subject=Demande%20de%20devis%20-%20Applications%20Mobiles" class="cta-button">Obtenir un devis</a>
+            </div>
+            <div class="service-box">
+                <h3>Applications Mobiles</h3>
+                <p>Développement d'applications pour iOS et Android.</p>
+                <a href="mailto:Stephanea872@gmail.com?subject=Demande%20de%20devis%20-%20Applications%20Mobiles" class="cta-button">Obtenir un devis</a>
+            </div>
+        </div>
+        <style>
+            .services-section {
+                text-align: center;
+                padding: 50px;
+                background-color: #000000;
+                color: #fff;
+            }
+            .services-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+                margin-top: 30px;
+            }
+            .service-box {
+                background-color: #000000;
+                padding: 20px;
+                border-radius: 10px;
+                width: 300px;
+                box-shadow: 0 4px 10px rgb(255, 255, 255);
+                transition: transform 0.3s ease;
+            }
+            .service-box:hover {
+                transform: scale(1.05);
+            }
+            .service-box h3 {
+                margin-top: 0;
+                font-size: 1.5em;
+            }
+            .service-box p {
+                font-size: 1em;
+                margin: 10px 0;
+            }
+            .cta-button {
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 1em;
+                color: #000000;
+                background-color: #04dddd;
+                border: none;
+                border-radius: 5px;
+                text-decoration: none;
+                transition: background-color 0.3s ease;
+            }
+            .cta-button:hover {
+                background-color: #ffffff;
+            }
+        </style>
+    </section>
+    
+
+    <!-- Section À Propos existante -->
     <section id="apropos">
         <h2>À Propos</h2>
         <p>Étudiant en Licence 2 MIAGE, passionné par le développement web et les technologies modernes. 
@@ -43,6 +168,7 @@
         <p>Je maîtrise le développement d’applications web et mobiles avec des technologies avancées, en combinant performance et design moderne.</p>
     </section>
     
+    <!-- Section Compétences existante -->
     <section id="competences">
         <h2>Compétences</h2>
         
@@ -90,7 +216,7 @@
         </ul>
     </section>
     
-
+    <!-- Section Projets existante -->
     <section id="projets">
         <h2>Mes Projets</h2>
         <div class="projets-container">
@@ -129,14 +255,13 @@
         </div>
     </section>
     
-
-    <!-- Section Contact -->
+    <!-- Section Contact existante -->
     <section id="contact">
         <h2>Contact</h2>
-        <form>
-            <input type="text" placeholder="Votre Nom">
-            <input type="email" placeholder="Votre Email">
-            <textarea placeholder="Votre Message"></textarea>
+        <form method="post">
+            <input type="text" name="nom" placeholder="Votre Nom" required>
+            <input type="email" name="email" placeholder="Votre Email" required>
+            <textarea name="message" placeholder="Votre Message" required></textarea>
             <button type="submit">Envoyer</button>
         </form>
     </section>
